@@ -20,3 +20,4 @@
 
 ## ECMAScript 6
 - [변수 선언](/DM/ECMAScript6/variable-declaration.md) - 2020.03.03
+- [Arrow Function(화살표 함수)](/DM/ECMAScript6/arrow-function.md) - 2020.03.04
