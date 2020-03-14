@@ -5,7 +5,7 @@ Lodash는 underscore에서 성능을 개선한 라이브러리이며,
 ---
 
 #### Category
-- Array : 배열에 사용 가능한 메소드
+- [Array](#1-Array) : 배열에 사용 가능한 메소드
 - Collection : 배열과 객체 모두 사용가능한 메소드
 - Date
 - Function
@@ -21,7 +21,7 @@ Lodash는 underscore에서 성능을 개선한 라이브러리이며,
 
 ---
 
-1. Array  
+## 1. Array  
 
 `_.concat(array, [values])`
 
