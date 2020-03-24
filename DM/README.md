@@ -12,6 +12,7 @@
 - [Database](#Database)
 - [React](#React)
 - [Javascript](#Javascript)
+- [HTML](#HTML)
 
 <br/>
 
@@ -37,3 +38,6 @@
 
 ## Javascript
 - [caps lock 체크](/DM/Javascript/caps-lock-check.md) - 2020.03.13
+
+## HTML
+- [IE 호환성보기 설정](/DM/HTML/compatibility-view-settings.md)
