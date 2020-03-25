@@ -1,0 +1,102 @@
+*{
+    font-family: "SF Display", "SF Text","SF Mono";
+}
+body{
+}
+body,ul{
+    margin:0;
+    padding:0;
+}
+
+ul, li{
+    list-style: none;
+
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 44px;
+    color: #F5F5F7;
+    z-index: 3;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav li {
+    float: left;
+    padding: 0 10px;
+    height: 44px;
+    line-height: 44px;
+
+}
+nav li a.search{
+    display:block;
+    height: 44px;
+    width: 18px;
+    background-image: url(image/search.svg);
+    background-size: cover;
+}
+nav li a.basket{
+    display:block;
+    height: 44px;
+    width: 18px;
+    background-image: url(image/basket.svg);
+    background-size: cover;
+
+}
+div.center{
+    width: 1024px;
+    margin: 0 auto;
+ }
+
+span {
+    width: 692px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+strong{
+    display: block;
+    text-align: center;
+    margin: 25px;
+    font-size: 17px;
+    padding-top: 44px;
+
+}
+.product a .product_bg{    
+    background-image: url(image/hero__dvsxv8smkkgi_large.jpg);
+    width: 100%;
+    height: 150%;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.product{
+    position: relative;
+}
+.product_info{
+    position: absolute;
+    top: 100;
+    width: 100%;
+    text-align: center;
+
+}
+div.product .product_info h5 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 200;
+    color: brown;
+}
+div.product .product_info h4{
+    margin: 20px;
+    font-size: 44px;
+    font-weight: 500;
+}
+div.product .product_info a{
+    margin:10px;
+    font-size: 21px;
+}
