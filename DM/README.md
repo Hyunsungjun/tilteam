@@ -35,9 +35,11 @@
 ## React
 - [React Element](/DM/React/react-create-element.md) - 2020.03.09
 - [ReactDom.render](/DM/React/reactdom-render.md) - 2020.03.11
+- [react-create-app 로 프로젝트 생성 시 오류 해결](/DM/React/react-create-app-troubleshooting.md) - 2020.03.25
 
 ## Javascript
 - [caps lock 체크](/DM/Javascript/caps-lock-check.md) - 2020.03.13
+- [시작일과 종료일 사이의 날짜 구하기](/DM/Javascript/get-date-between-startdate-and-enddate.md) - 2020.03.25
 
 ## HTML
 - [IE 호환성보기 설정](/DM/HTML/compatibility-view-settings.md)
