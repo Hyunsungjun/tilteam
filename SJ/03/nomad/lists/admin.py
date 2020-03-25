@@ -10,3 +10,7 @@ class ListAdmin(admin.ModelAdmin):
         "user",
         "count_rooms",
     )
+
+    search_fields = ("name",)
+
+    filter_horizontal = ("rooms",)
