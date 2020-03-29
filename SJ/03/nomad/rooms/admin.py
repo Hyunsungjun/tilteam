@@ -1,21 +1,28 @@
 from django.contrib import admin
+from django.utils.html import mark_safe
 from . import models
 
-@admin.register(models.RoomType, models.Factility , models.Amenity, models.HouseRule)
+@admin.register(models.RoomType, models.Facility , models.Amenity, models.HouseRule)
 class ItemAdmin(admin.ModelAdmin):
     """ Item Admin Definition """
     list_display = ("name","used_by")
     def used_by(self, obj):
         return obj.rooms.count()
+    pass
+    
+class PhotoInline(admin.StackedInline):
+    model = models.Photo
+
 @admin.register(models.Room)
 class RoomAdmin(admin.ModelAdmin):
     """ Room Admin Definition """
 
+    inlines = (PhotoInline,)
 
     fieldsets = (
         (
             "Basic Info",
-            {"fields": ("name", "description", "country", "address", "price")},
+            {"fields": ("name", "description", "country","city", "address", "price")},
         ),
         ("Times", {"fields": ("check_in", "check_out", "instant_book")}),
         ("Spaces", {"fields": ("guests", "beds", "bedrooms", "baths")}),
@@ -31,8 +38,8 @@ class RoomAdmin(admin.ModelAdmin):
 
     list_display = ( 
         "name",
-        "country",
         "city",
+        "country",
         "price",
         "address",
         "guests",
@@ -60,7 +67,9 @@ class RoomAdmin(admin.ModelAdmin):
         "country",
     )
 
-    search_fields = ("^city","^host__username",'bedrooms')
+    raw_id_fields = ("host",)
+
+    search_fields = ("=city","^host__username",)
 
     filter_horizontal = ("amenities", "facilities", "house_rules")
 
@@ -73,6 +82,10 @@ class RoomAdmin(admin.ModelAdmin):
 
 @admin.register(models.Photo)
 class PhotoAdmin(admin.ModelAdmin):
-    """ """
-    pass
+    """ photo Admin Definition """
+    list_display = ('__str__','get_thumbnail')
+
+    def get_thumbnail(self, obj):
+        return mark_safe(f'<img width=50px src="{obj.file.url}" />')
+    get_thumbnail.short_description = "Thumbnail"
 
