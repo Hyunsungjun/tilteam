@@ -13,7 +13,7 @@
 - [React](#React)
 - [Javascript](#Javascript)
 - [HTML](#HTML)
-- [C#](#C%23)
+- [C#](#C)
 
 <br/>
 
