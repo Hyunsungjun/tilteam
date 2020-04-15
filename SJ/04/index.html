@@ -1,0 +1,48 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <table width="350" height="100px" >
+    <tbody>
+        <form action="">
+            <input type="button" value='더하기'>
+            <input type="button" value='빼기' onclick="mi()">
+            <input type="button" value='새로고침'>
+        </form>
+
+        <script>
+            n=6;
+            function mi(){
+                n = -1;
+                
+            }
+        for(t=0; t<n; t++){
+            //변수 값 정의
+            let subject = new Array();
+            subject = ["국어","수학","영어","체육","음악","과학"];
+            let score =  new Array();
+            let a = score.length;
+            score = [20,60,100,10,40,70];
+            document.write('<td>');
+            document.write('<br>');
+            document.write('<td width="350px" height="100px" style="border:1px solid black; text-align:center;">')
+            document.write(subject[t]+'</td>');
+            document.write('<td width="350px" height="100px" style="border:1px solid black; text-align:center;">')
+            document.write(score[t]+'</td>');
+            document.write('</tr>');
+
+            }
+        
+        </script>
+    </tbody>
+    </table>
+</body>
+</html>
