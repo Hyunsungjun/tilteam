@@ -2,7 +2,9 @@
 
 int main(void)
 {
-    printf("hello \n"); //싱글쿼터는 안되네
+    char n;
+    printf("stat youre name: ");
+    scanf("%s",&n);
+    getchar();
+    printf("hello \n");
 }
-
-// ./name execute 명령

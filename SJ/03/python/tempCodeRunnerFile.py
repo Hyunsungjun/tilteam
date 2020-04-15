@@ -1,2 +1,2 @@
 
-print(num)
+    x.reverse()

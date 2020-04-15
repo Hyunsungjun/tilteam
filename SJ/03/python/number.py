@@ -14,16 +14,16 @@ cursor = conn.cursor()
 # 데이터베이스 생성
 # sql = "CREATE DATABASE Contact" 
 # cursor.execute(sql) 
-
+ 
 # 테이블 생성
-# sql = '''CREATE TABLE Number (
-#     id int(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-#     Phone varchar(255)
-# )'''
-# cursor.execute(sql) 
+sql = '''CREATE TABLE Number (
+    id int(20) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Phone varchar(255)
+)'''
+cursor.execute(sql) 
 
 # # 데이터 입력
-# sql = "INSERT INTO Number (Phone) VALUES (%s) WHERE NOT EXISTS SELECT * FROM Number WHERE Phone = %s" #일단 나중에 수정
+# sql = "INSERT INTO Number (showPhone) VALUES (%s) WHERE NOT EXISTS SELECT * FROM Number WHERE Phone = %s" #일단 나중에 수정
 # sql = "INSERT INTO Number (Phone) VALUES (%s)" 
 
 
