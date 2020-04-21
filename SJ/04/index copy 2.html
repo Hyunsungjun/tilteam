@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <style>
+        #testTable {
+            width: 500px;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        #testTable th,
+        #testTable td {
+            padding: 5px 12px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        #testTable th {
+            background: #eee;
+        }
+
+        #testTable .btn_delete {
+            padding: 5px 10px;
+            background: #fbdb65;
+            border: none;
+            cursor: pointer;
+        }
+    </style> -->
+</head>
+
+<body>
+    <table id="testTable">
+        <colgroup>
+            <col style="width: 10%">
+            <col style="width: 70%">
+            <col style="width: 20%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Contents</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>내용1</td>
+                <td>
+                    <button type="button" class="btn_delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>내용1</td>
+                <td>
+                    <button type="button" class="btn_delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>내용1</td>
+                <td>
+                    <button type="button" class="btn_delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>내용1</td>
+                <td>
+                    <button type="button" class="btn_delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>내용1</td>
+                <td>
+                    <button type="button" class="btn_delete">Delete</button>
+                </td>
+            </tr>
+    <script>
+var eventTarget = document.getElementsByClassName('btn_delete')
+for (var i=0; i<eventTarget.length; i++) { 
+    eventTarget[i].addEventListener('click', function() { 
+    var parent=document.querySelector('#testTable tbody') 
+    if ( i> 1 ) {
+    parent.removeChild(this.parentElement.parentElement)
+    i --
+    } else {
+    alert('마지막 행은 삭제 불가합니다.')
+    }
+    })
+    }
+
+
+
+
+    </script>
+        </tbody>
+    </table>
+</body>
+
+</html>

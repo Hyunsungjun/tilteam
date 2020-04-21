@@ -1,0 +1,65 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <table>
+        
+        <script>
+            // document.write('<input type="button" value="더하기" onclick="mi()">')
+            // document.write('<input type="button" value="빼기" onclick="mi()">')
+            document.write('<input type="button" value="새로고침">')
+            
+            count=1;
+            //변수 값 정의
+            let subject = new Array();
+            subject = ["국어","수학","영어","체육","음악","과학"];
+            let score =  new Array();
+            score = [20,60,100,10,40,70];
+            function ai(){
+            let num = subject.indexOf(subject[t]);
+                score.splice(num,1);
+                subject.splice(num,1);
+                si();
+            }
+            si();
+            function si(){
+
+        for(t=0; t<score.length; t++){
+            document.write('<tbody>');
+            document.write('<td>');
+            document.write('<br>');
+            // document.write(score[t]);
+            document.write('<td style="border:1px solid black; text-align:center;">')
+            document.write(subject[t]+'</td>');
+            document.write('<td style="border:1px solid black; text-align:center;">')
+            document.write(score[t]+'</td>');
+            document.write('<br>');
+
+            // document.write('<td><input type="button" value="삭제" onclick="ai()"></td>')
+            const button1 = document.createElement('button');
+            const buttona = document.createTextNode('삭제');
+            button1.appendChild(buttona);
+            aa=document.body.appendChild(button1);
+
+            
+            document.write('</tr>');
+            document.write('</tbody>');
+        }
+            }
+    
+        
+        
+        </script>
+        
+    </table>
+</body>
+</html>
