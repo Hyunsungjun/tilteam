@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<headd>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뾰로롱의 프로필 입니다.</title>
+    <style>
+        ul{
+            list-style:none;
+            width:100%;
+            position: relative;
+        }
+        #vertical {
+            border-left: 6px solid ;
+            height: 500px;
+            position: absolute;
+            left: 400px;
+            margin-left: -3px;
+            top: 400px;
+        }
+        #left-li{
+            height: 500px;
+            position: relative;
+            left:280px;
+            top: 400px;
+            line-height: 80px;
+
+        }
+        #right-li{
+            height: 500px;
+            position: absolute;
+            left:370px;
+            top: 400px;
+            line-height: 80px;
+        }
+        h2{
+            position: absolute;
+            left:400px;
+            top: 330px; 
+        }
+        h1{
+            position: absolute;
+            left: 200px;
+            top: 100px;
+            border-radius: 25px;
+            background: rgba(62, 173, 71, 0.651);
+            background-repeat: repeat;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+        .contents-left {
+            position: relative;
+            line-height: 0px;
+        }
+        .contents-right {
+            position: relative;
+            line-height: 0px;
+        }
+        #solid1{
+            z-index: -10;
+            height: 550px;
+            position: absolute;
+            left: 200px;
+            top: 350px;
+            border-radius: 25px;
+            background: rgba(62, 173, 71, 0.651);
+            background-repeat: no-repeat;
+            width: 430px;
+        }
+        #image1{
+            text-align: center;
+            position: relative;
+            transform:translate(100px);
+        }
+    </style>
+</head>
+<body>
+    <h1>뾰로롱 프로필</h1>
+
+    <h2>프로필</h2>
+    <div id="solid1">
+        <img id= "image1"src="image.png" alt="이미지" width="80" style="right: 30;">
+    </div>
+    <ul id="left-li">
+        <li>이름</li>
+        <li class="contents-left">현성준</li>
+        <li>생년월일</li>
+        <li class="contents-left" style= "left:-40px;">1991년 7월 3일</li>
+        <li>연락처</li>
+        <li class="contents-left" style= "left:-40px;">010-9876-5432</li>
+        <li>이메일</li>
+        <li class="contents-left" style= "left:-40px;">abc@abc.com</li>
+        <li>취미</li>
+        <li class="contents-left" style= "left:-40px;">유튜브 시청</li>
+    </ul>
+    <div id="vertical"></div>
+    <ul id="right-li">
+        <li>특기</li>
+        <li class="contents-right">편집디자인(포토샵,프리미어)</li>
+        <li>기술</li>
+        <li class="contents-right">프론트엔드 기술자 예정</li>
+    </ul>
+</body>
+</html>

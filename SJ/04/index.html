@@ -38,13 +38,18 @@
             document.write('<td>');
             document.write('<br>');
             // document.write(score[t]);
-            // document.write('<td width="350px" height="100px" style="border:1px solid black; text-align:center;">')
+            document.write('<td style="border:1px solid black; text-align:center;">')
             document.write(subject[t]+'</td>');
-            // document.write('<td width="350px" height="100px" style="border:1px solid black; text-align:center;">')
+            document.write('<td style="border:1px solid black; text-align:center;">')
             document.write(score[t]+'</td>');
             document.write('<br>');
 
-            document.write('<td><input type="button" value="삭제" onclick="ai()"></td>')
+            // document.write('<td><input type="button" value="삭제" onclick="ai()"></td>')
+            const button1 = document.createElement('button');
+            const buttona = document.createTextNode('삭제');
+            button1.appendChild(buttona);
+            aa=document.body.appendChild(button1);
+
             
             document.write('</tr>');
             document.write('</tbody>');
