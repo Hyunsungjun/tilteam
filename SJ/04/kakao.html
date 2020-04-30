@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뾰로롱의 프로필 카드 입니다.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .full {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+            width: 400px;
+            height: 500px;
+            font-family: arial;
+            padding: 20px;
+        }
+        .black{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+        .contents {
+            padding: 5px;
+            border: 101px;
+            display: block;
+
+        }
+
+        #back-col {
+            background-image: url("카카오 프로필.png");
+            background-repeat: no-repeat;
+            width: 400px;
+            height: 200px;
+        }
+
+        .cardtext {
+            position: relative;
+            right: 250px;
+        }
+        hr{
+            height: 1px;
+            background-color: black;
+        }
+
+    </style>
+    <script>
+        // const res = data => {
+        //     for(let key in data) {
+        //         if(data.hasOwnProperty(key))
+        //         console.log(`${key}: ${data[key]}`);
+        //     }
+        // };
+
+        // const getDataFetch = url => (
+        //     fetch(url).then(res => res.json())
+        // );
+        // getDataFetch(jsonURL[0])
+        // .then(data => {
+        //     res(data);
+        //     return getDataFetch(jsonURL[1]);
+        // })
+
+        // const jsonURL = "data.json";
+        // let value;
+        //     fetch(jsonURL)
+        //     .then(res=> res.json())
+        //     .then(data => {value=data})
+        //     console.log(value);
+
+        // const jsonURL ="data.json";
+        // const getDataFetch = url => (
+        //     fetch(url)
+        //     .then(res => res.json())
+        // );
+
+//여기부터 다시시작
+
+(async () => {
+  const data = await fetch('data.json').then(res => res.json())
+
+
+    const name = JSON.stringify(data.name);
+    console.log(name);
+    // document.getElementById(na).innerHTML='hi';
+
+
+(function () {
+
+    document.getElementById("1").innerHTML = data.name;
+    document.getElementById("2").innerHTML = data.self;
+    document.getElementById("3").innerHTML = data.URL;
+    document.getElementById("4").innerHTML = data.phone;
+    document.getElementById("5").innerHTML = data.email;
+})()
+})()
+
+/////////////////////////////////////////////////////////////////////////
+
+// url = 'data.json';
+
+// async function getData(url) {
+//     const response = await fetch(url);
+
+//     return response.json()
+// }
+
+// async function main() {
+//     const data = await getData(url);
+
+//     console.log(data)
+// }
+
+
+// let jsondata;    
+// fetch("data.json").then(
+//         function(u){ return u.json();}
+//       ).then(
+//         function(json){
+//           jsondata = json;
+//         }
+//       )
+//         console.log(jsondata)
+
+
+// (async () => {
+//   const data = await fetch('data.json').then(res => res.json())
+//   console.log(data)
+// })()
+
+
+// fetch('data.json')
+//     .then(response => response.json())
+//     .then(json => {
+//         const hey = JSON.stringify(json)
+//         document.getElementsByClassName('pro').innerHTML = hey;
+//     });
+// json();
+
+
+
+// const urls ='data.json'
+// const data = urls.map(async url => {
+//     const response = await fetch(url);
+//     return response.json();
+// })
+
+// function logFetch() {
+//   return fetch('data.json')
+//     .then(response => response.text())
+//     .then(text => {
+//       console.log(text);
+//     }).catch(err => {
+//       console.error('fetch failed', err);
+//     });
+
+// async function main () {
+//   document.getelementsbyclassname('pro').innerHTML = await fetch('data.json').then(r => r.text())
+// }
+
+
+
+// async function apiGetAll () {
+//     const resp = await fetch("data.json")
+//     .then(res => res.json())
+
+//     return resp
+// }
+// console.log(apiGetAll())
+// data2 = apiGetAll().then(apiGetAll.name)
+// console.log(data2.self);
+
+//         const value;
+// data1 = (async () => {
+//   const data = await fetch('data.json')
+//   .then(res => res.json())
+//   .then(function(res){
+//       console.log(res);
+//       return
+//   })
+// })();
+            //누가 이기는지 보기위한 출력물
+            // value();
+            // console.log(data1);
+            // console.log(value);
+
+
+
+        // async() => {
+        //     const data =
+        //     await fetch('data.json')
+        //     .then(res => {return res.json();})
+        //     .then(json => console.log(json));
+        // }
+        //     console.log(data);
+
+            // const user = fetch("data.json");
+
+
+
+
+        // (async () => {
+        //     try {
+        //         const data = await getDataFetch(jsonURL[0]).then(data => res(data));
+        //         console.log(data);
+        //     } catch(err) {
+        //         console.log(err);
+        //     }
+        // });
+        // console.log(data);
+
+        // const jsonURL ="data.json";
+        // const getDataFetch = url => (
+        //     fetch(url).then(res => console.log(res.json()))
+        // );
+
+        // const request = async() => {
+        //         const response = await data.json();
+        //         console.log(data.json);
+        // }
+        // request();
+//성공 콜백함수
+        
+
+
+    </script>
+</head>
+
+<body>
+    <div class="full">
+
+            <div class="card">
+                <div id="back-col">
+                </div>
+                <div style="position: absolute; top:50px; left: 280px;">
+                    <img id="front-col" src="image.png" alt="이미지" height="100px">
+                    <p class="cardtext">뾰로롱 입니다.</p>
+                </div>
+            </div>
+
+            <div class="contents">
+            <h2>프로필 정보</h2>
+            <p class="pro">닉네임(1/20)</p>
+            <p class="pro" id="1">.</p>
+            <hr>
+            <p class="pro" id="2">자기소개</p>
+            <hr>
+            <p class="pro" id="3">유알엘</p>
+            <hr>
+            <p class="pro" id="4"><img src="전화기.png" height="15px"> 연락처</p>
+            <hr>
+            <p class="pro" id="5"><img src="골뱅이.png" height="15px"> 이메일</p>
+            <hr>
+        </div>
+    </div>
+</body>
+
+</html>

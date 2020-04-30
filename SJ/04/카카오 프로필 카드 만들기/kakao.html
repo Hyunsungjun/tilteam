@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뾰로롱의 프로필 카드 입니다.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .full {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+            width: 400px;
+            height: 500px;
+            font-family: arial;
+
+        }
+
+        .contents {
+            padding: 5px;
+            border: 101px;
+            display: block;
+
+        }
+
+        #back-col {
+            background-image: url("카카오 프로필.png");
+            background-repeat: no-repeat;
+            width: 400px;
+            height: 200px;
+        }
+
+        .cardtext {
+            position: relative;
+            right: 250px;
+        }
+        hr{
+            height: 1px;
+            background-color: black;
+        }
+
+    </style>
+    <script>
+        fetch('data.json')
+        .then(function(response){
+            return response.json();
+        })
+        .catch(err => {
+            console.log("에러")
+        })
+        const a = response;
+        console.log();
+
+        </script>
+</head>
+
+<body>
+    <div class="full">
+        <div class="card">
+            <div id="back-col">
+            </div>
+            <div style="position: absolute; top:50px; left: 280px;">
+                <img id="front-col" src="image.png" alt="이미지" height="100px">
+                <p class="cardtext">뾰로롱 입니다.</p>
+            </div>
+        </div>
+        <div class="contents">
+            <h2>프로필 정보</h2>
+            <p class="pro">닉네임(1/20)</p>
+            <p class="pro">뾰로롱</p>
+            <hr>
+            <p class="pro">자기소개</p>
+            <hr>
+            <p class="pro">유알엘</p>
+            <hr>
+            <p class="pro"><img src="전화기.png" height="15px"> 연락처</p>
+            <hr>
+            <p class="pro"><img src="골뱅이.png" height="15px"> 이메일</p>
+            <hr>
+        </div>
+    </div>
+</body>
+
+</html>
